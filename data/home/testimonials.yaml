@@ -1,0 +1,26 @@
+enabled: true
+id: "testimonials"
+
+content:
+  title: "Customer Testimonials"
+
+  featured:
+    image: "images/happy-customer.png"
+    text: "The custom cake was beyond our expectations! Not only did it look stunning, but it tasted absolutely divine. Our guests couldn't stop raving about it. Highly recommend for any special occasion!"
+    client: "Priya S., Birthday Cake Client"
+
+  list:
+    - text: "We ordered a selection of mini desserts for our corporate event, and they were a hit! Beautifully presented and absolutely delicious. The tiramisu was particularly outstanding."
+      client: "Rahul M., Corporate Client"
+
+    - text: "I needed a last-minute custom cake, and they delivered an amazing one in just 48 hours. It looked gorgeous and tasted fantastic. I'm so grateful!"
+      client: "Neha P., Wedding Client"
+
+    - text: "The cheesecake gift hamper I ordered was perfect. The packaging was elegant, and the cakes were fresh and flavorful. A wonderful gift option for any occasion!"
+      client: "Anil K., Gift Order"
+
+    # - text: "I’ve tried their cupcakes, cheesecakes, and tiramisu – everything is consistently delicious. It's my go-to place whenever I need something indulgent and beautifully made."
+    #   client: "Aditi R., Regular Customer"
+
+    # - text: "Their customer service is just as good as their cakes! The team is friendly, responsive, and they really pay attention to detail. Always a great experience."
+    #   client: "Arjun T., Custom Cake Client"

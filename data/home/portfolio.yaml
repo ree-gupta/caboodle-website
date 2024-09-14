@@ -1,0 +1,40 @@
+enabled: true
+id: "portfolio"
+
+content:
+  - image: "images/custom-cakes.png"
+    pretitle: "Gourmet Creations"
+    title: "We create custom cakes for every occasion"
+    text: "From birthdays to weddings, our custom cakes are designed to impress. Each creation is handcrafted with attention to detail and delicious flavors that leave a lasting impression."
+
+    buttons:
+      - label: "See our creations"
+        url: "https://www.instagram.com/cakecaboodle/"
+
+      - label: "Order now"
+        url: "https://wa.me/c/917460884929"
+
+  - image: "images/corporate-orders.png"
+    pretitle: "Corporate Gifts"
+    title: "Corporate Orders and Gift Hampers"
+    text: "Impress clients and colleagues with our exquisite corporate cakes and gift hampers. Whether it's a small token or a grand gesture, we provide gourmet treats to suit your needs."
+
+    buttons:
+      - label: "View options"
+        url: "https://www.instagram.com/cakecaboodle/"
+
+      - label: "Contact us"
+        url: "https://wa.me/c/917460884929"
+
+  - image: "images/mini-indulgence.png"
+    pretitle: "Mini Indulgences"
+    title: "Tiramisu, Cupcakes, Cheesecakes & More"
+    text: "Indulge in our selection of mini desserts. From rich tiramisu to creamy cheesecakes and playful cupcakes, we offer something for every sweet tooth."
+
+    buttons:
+      - label: "Browse mini desserts"
+        url: "https://www.instagram.com/cakecaboodle/"
+
+      - label: "Order now"
+        url: "https://wa.me/c/917460884929"
+

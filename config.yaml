@@ -1,0 +1,88 @@
+baseURL: "https://www.example.com/"
+theme: "up-business-theme"
+languageCode: "en-us"
+
+title: "Cake Caboodle"
+
+# googleAnalytics: ""
+
+summaryLength: 20
+
+params:
+  title: "Cake Caboodle"
+  description: "Cake Caboodle offers gourmet cakes and pastries, crafted with the finest ingredients for a celebration of flavor and artistry. From custom cakes to a variety of treats, we cater to all your sweet indulgences."
+  images:
+    - "images/hero-image.png"
+
+  logo: "arrow-up.png"
+
+  favicons:
+    themeColor: "#FFFFFF"
+    backgroundColor: "#FFFFFF"
+    faviconColor: "#000000"
+
+  social:
+    instagram: "https://www.instagram.com/cakecaboodle/"
+    facebook: "https://www.facebook.com/cuisinecaboodle"
+    twitter: ""
+
+  location:
+    - "A 515 Panama Park, Parwal Road, Lohegaon, Pune, Maharashtra 411047, India"
+
+  contact:
+    - "cuisinecaboodle@gmail.com"
+
+  copyright: "© 2022 Cake Caboodle All Rights Reserved"
+
+menus:
+  main:
+    - name: "Home"
+      url: "/#hero"
+      weight: 1
+
+    # - name: "How we work"
+    #   url: "/#"
+    #   weight: 2
+
+    # - name: "Our team"
+    #   url: "/#"
+    #   weight: 3
+
+    # - name: "Pricing"
+    #   url: "/#"
+    #   weight: 4
+
+    # - name: "Blog"
+    #   url: "/blog"
+    #   weight: 5
+
+  buttons:
+    - name: "Order NOW!"
+      url: "https://wa.me/c/917460884929"
+      weight: 5
+      pre: "btn btn-primary text-light"
+
+  footer:
+    - name: "Home"
+      url: "/#hero"
+      weight: 1
+
+    # - name: "How we work"
+    #   url: "/#"
+    #   weight: 2
+
+    # - name: "Our team"
+    #   url: "/#"
+    #   weight: 3
+
+    # - name: "Pricing"
+    #   url: "/#"
+    #   weight: 4
+
+    # - name: "Blog"
+    #   url: "/blog"
+      weight: 5
+
+taxonomies:
+  series: "series"
+  tags: "tags"

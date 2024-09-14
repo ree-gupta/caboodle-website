@@ -1,0 +1,27 @@
+enabled: true
+id: "services"
+
+content:
+  title: "Make an impression!"
+  text: "Indulge in our range of gourmet cake services, designed to bring sweetness to any occasion. From personalized cakes to corporate orders, we deliver quality and taste in every bite."
+  cards:
+    - image: "images/custom-cakes.png"
+      title: "Custom Cakes"
+      text: "Whether it's a birthday, wedding, or special event, our cakes are made to match your unique vision, using premium ingredients and stunning designs."
+      button:
+        label: "See Creations"
+        url: "https://www.instagram.com/cakecaboodle/"
+
+    - image: "images/corporate-orders.png"
+      title: "Corporate Orders"
+      text: "Our corporate cakes and gift hampers are the perfect way to impress clients, colleagues, and partners. Customize your order to fit your brand and occasion."
+      button:
+        label: "See Creations"
+        url: "https://www.instagram.com/cakecaboodle/"
+
+    - image: "images/mini-indulgence.png"
+      title: "Mini Indulgent Desserts"
+      text: "Enjoy our range of indulgent mini desserts like tiramisu, cupcakes, and cheesecakes. Perfect for events, parties, or simply as a treat for yourself."
+      button:
+        label: "See Creations"
+        url: "https://www.instagram.com/cakecaboodle/"

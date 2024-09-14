@@ -1,0 +1,9 @@
+enabled: true
+id: "cta"
+
+content:
+  title: "Get Your Delicious Gourmet Sweet Treat Today!"
+  image: "images/fruit-cake.png"
+  button:
+    label: "Let's talk"
+    url: "https://wa.me/c/917460884929"

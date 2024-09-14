@@ -1,0 +1,15 @@
+enabled: true
+id: "hero"
+
+content:
+  title: "Craving **gourmet** cakes?"
+  text: "Indulge in our gourmet cakes and bakery products. From classic flavors to unique creations, we have something for every occasion. Taste the difference with our premium ingredients and expert craftsmanship."
+
+  buttonPrimary:
+    label: "Our Creations"
+    url: "https://www.instagram.com/cakecaboodle/"
+
+  buttonSecondary:
+    label: "Order Now"
+    url: "https://wa.me/c/917460884929"
+
