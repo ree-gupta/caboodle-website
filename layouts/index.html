@@ -4,31 +4,59 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="facebook-domain-verification" content="ql6wrpr1sp9ictoayi4te01o35etkg" />
-    <!-- Meta Pixel Code -->
+    <!-- Consent Management -->
     <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '814364071049239');
-    fbq('track', 'PageView');
+    window.cookieConsent = {
+        accepted: false,
+        analytics: false,
+        marketing: false
+    };
+
+    function loadAnalytics() {
+        if (window.cookieConsent.analytics) {
+            // Google Analytics 4 (GA4)
+            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtag/js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','G-4JHN9QHJCZ');
+
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-4JHN9QHJCZ');
+        }
+    }
+
+    function loadMarketing() {
+        if (window.cookieConsent.marketing) {
+            // Meta Pixel Code
+            !function(f,b,e,v,n,t,s)
+            {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+            n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t,s)}(window, document,'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+            fbq('init', '814364071049239');
+            fbq('track', 'PageView');
+        }
+    }
+
+    // Check for existing consent
+    if (localStorage.getItem('cookieConsent') === 'true') {
+        window.cookieConsent.accepted = true;
+        window.cookieConsent.analytics = localStorage.getItem('cookieAnalytics') === 'true';
+        window.cookieConsent.marketing = localStorage.getItem('cookieMarketing') === 'true';
+        loadAnalytics();
+        loadMarketing();
+    }
     </script>
-    <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=814364071049239&ev=PageView&noscript=1"
-    /></noscript>
-    <!-- End Meta Pixel Code -->
-    <!-- Google Analytics 4 (GA4) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4JHN9QHJCZ"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-4JHN9QHJCZ');
-    </script>
+    <noscript>
+        <img height="1" width="1" style="display:none"
+        src="https://www.facebook.com/tr?id=814364071049239&ev=PageView&noscript=1" />
+    </noscript>
 
     <!-- SEO Meta Tags -->
     <title>{{ .Site.Title }} - Premium Patisserie in Pune | Custom Cakes for All Occasions</title>
@@ -576,6 +604,251 @@
     </script>
 </head>
 <body>
+    <!-- Cookie Consent Banner -->
+    <div id="cookieConsent" class="cookie-consent-banner" style="display: none;">
+        <div class="cookie-content">
+            <div class="cookie-text">
+                <p><strong>🍪 We value your privacy</strong></p>
+                <p>We use cookies to enhance your experience and improve our services. You can choose which cookies to accept:</p>
+            </div>
+            <div class="cookie-options">
+                <label class="cookie-option">
+                    <input type="checkbox" id="essentialCookies" checked disabled>
+                    <span>Essential (Required)</span>
+                </label>
+                <label class="cookie-option">
+                    <input type="checkbox" id="analyticsCookies">
+                    <span>Analytics (Google Analytics)</span>
+                </label>
+                <label class="cookie-option">
+                    <input type="checkbox" id="marketingCookies">
+                    <span>Marketing (Facebook Pixel)</span>
+                </label>
+            </div>
+            <div class="cookie-buttons">
+                <button id="acceptSelected" class="cookie-btn accept-btn">Accept Selected</button>
+                <button id="acceptAll" class="cookie-btn accept-all-btn">Accept All</button>
+                <button id="rejectAll" class="cookie-btn reject-btn">Reject Optional</button>
+            </div>
+            <p class="cookie-info">
+                <a href="/privacy-policy.html" target="_blank">View Privacy Policy</a>
+            </p>
+        </div>
+    </div>
+
+    <!-- Cookie Consent Styles -->
+    <style>
+    .cookie-consent-banner {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(255, 255, 255, 0.98);
+        border-top: 3px solid #e91e63;
+        box-shadow: 0 -5px 20px rgba(0,0,0,0.1);
+        z-index: 10000;
+        padding: 15px;
+        backdrop-filter: blur(10px);
+    }
+
+    .cookie-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .cookie-text p {
+        margin: 0 0 5px 0;
+        font-size: 14px;
+        line-height: 1.4;
+        color: #333;
+    }
+
+    .cookie-text strong {
+        color: #e91e63;
+        font-size: 16px;
+    }
+
+    .cookie-options {
+        display: flex;
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    .cookie-option {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        font-size: 13px;
+        cursor: pointer;
+        color: #555;
+    }
+
+    .cookie-option input[type="checkbox"] {
+        margin: 0;
+        cursor: pointer;
+    }
+
+    .cookie-buttons {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    .cookie-btn {
+        padding: 8px 16px;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 13px;
+        font-weight: 500;
+        transition: all 0.3s ease;
+    }
+
+    .accept-all-btn {
+        background: #e91e63;
+        color: white;
+    }
+
+    .accept-all-btn:hover {
+        background: #c2185b;
+    }
+
+    .accept-btn {
+        background: #4caf50;
+        color: white;
+    }
+
+    .accept-btn:hover {
+        background: #45a049;
+    }
+
+    .reject-btn {
+        background: #f5f5f5;
+        color: #666;
+        border: 1px solid #ddd;
+    }
+
+    .reject-btn:hover {
+        background: #eee;
+    }
+
+    .cookie-info {
+        font-size: 12px;
+        margin: 0;
+    }
+
+    .cookie-info a {
+        color: #e91e63;
+        text-decoration: none;
+    }
+
+    .cookie-info a:hover {
+        text-decoration: underline;
+    }
+
+    @media (min-width: 768px) {
+        .cookie-content {
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .cookie-text {
+            flex: 1;
+        }
+
+        .cookie-options {
+            flex: none;
+        }
+
+        .cookie-buttons {
+            flex: none;
+        }
+    }
+
+    @media (max-width: 767px) {
+        .cookie-consent-banner {
+            padding: 12px;
+        }
+
+        .cookie-text p {
+            font-size: 13px;
+        }
+
+        .cookie-btn {
+            flex: 1;
+            min-width: 120px;
+            padding: 10px;
+        }
+    }
+    </style>
+
+    <!-- Cookie Consent JavaScript -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const consentBanner = document.getElementById('cookieConsent');
+        const acceptAllBtn = document.getElementById('acceptAll');
+        const acceptSelectedBtn = document.getElementById('acceptSelected');
+        const rejectAllBtn = document.getElementById('rejectAll');
+        const analyticsCookies = document.getElementById('analyticsCookies');
+        const marketingCookies = document.getElementById('marketingCookies');
+
+        // Show banner if no consent given
+        if (!localStorage.getItem('cookieConsent')) {
+            consentBanner.style.display = 'block';
+        }
+
+        // Accept all cookies
+        acceptAllBtn.addEventListener('click', function() {
+            localStorage.setItem('cookieConsent', 'true');
+            localStorage.setItem('cookieAnalytics', 'true');
+            localStorage.setItem('cookieMarketing', 'true');
+
+            window.cookieConsent.accepted = true;
+            window.cookieConsent.analytics = true;
+            window.cookieConsent.marketing = true;
+
+            loadAnalytics();
+            loadMarketing();
+            consentBanner.style.display = 'none';
+        });
+
+        // Accept selected cookies
+        acceptSelectedBtn.addEventListener('click', function() {
+            const analyticsSelected = analyticsCookies.checked;
+            const marketingSelected = marketingCookies.checked;
+
+            localStorage.setItem('cookieConsent', 'true');
+            localStorage.setItem('cookieAnalytics', analyticsSelected.toString());
+            localStorage.setItem('cookieMarketing', marketingSelected.toString());
+
+            window.cookieConsent.accepted = true;
+            window.cookieConsent.analytics = analyticsSelected;
+            window.cookieConsent.marketing = marketingSelected;
+
+            if (analyticsSelected) loadAnalytics();
+            if (marketingSelected) loadMarketing();
+            consentBanner.style.display = 'none';
+        });
+
+        // Reject all optional cookies
+        rejectAllBtn.addEventListener('click', function() {
+            localStorage.setItem('cookieConsent', 'true');
+            localStorage.setItem('cookieAnalytics', 'false');
+            localStorage.setItem('cookieMarketing', 'false');
+
+            window.cookieConsent.accepted = true;
+            window.cookieConsent.analytics = false;
+            window.cookieConsent.marketing = false;
+
+            consentBanner.style.display = 'none';
+        });
+    });
+    </script>
+
     <div class="container">
         <img src="{{ .Site.Params.logo }}" alt="{{ .Site.Title }}" class="logo">
         
