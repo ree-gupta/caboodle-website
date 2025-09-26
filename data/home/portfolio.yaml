@@ -12,7 +12,7 @@ content:
         url: "https://www.instagram.com/cakecaboodle/"
 
       - label: "Order now"
-        url: "https://wa.me/c/917460884929"
+        url: "https://wa.me/c/917276239427"
 
   - image: "images/corporate-orders.png"
     pretitle: "Corporate Gifts"
@@ -24,7 +24,7 @@ content:
         url: "https://www.instagram.com/cakecaboodle/"
 
       - label: "Contact us"
-        url: "https://wa.me/c/917460884929"
+        url: "https://wa.me/c/917276239427"
 
   - image: "images/mini-indulgence.png"
     pretitle: "Mini Indulgences"
@@ -36,5 +36,5 @@ content:
         url: "https://www.instagram.com/cakecaboodle/"
 
       - label: "Order now"
-        url: "https://wa.me/c/917460884929"
+        url: "https://wa.me/c/917276239427"
 

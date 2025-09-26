@@ -1,0 +1,205 @@
+<!-- Enhanced SEO and Schema Markup for Cake Caboodle -->
+
+<!-- Google Analytics 4 (GA4) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4JHN9QHJCZ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-4JHN9QHJCZ');
+</script>
+
+<!-- Keywords Meta Tag -->
+<meta name="keywords" content="gourmet cakes pune, custom cakes magarpatta, bakery hadapsar, wedding cakes pune, birthday cakes, corporate cakes, artisanal chocolate, patisserie pune, cake delivery pune, handmade cakes, premium bakery, cake caboodle">
+<meta name="author" content="Cake Caboodle">
+<meta name="copyright" content="© 2024 Cake Caboodle All Rights Reserved">
+<meta name="robots" content="index, follow">
+
+<!-- Open Graph Meta Tags for Social Sharing -->
+<meta property="og:title" content="{{ .Site.Params.title }} - {{ .Site.Params.description }}">
+<meta property="og:description" content="{{ .Site.Params.description }}">
+<meta property="og:type" content="website">
+<meta property="og:url" content="{{ .Site.BaseURL }}">
+<meta property="og:image" content="{{ .Site.BaseURL }}{{ index .Site.Params.images 0 }}">
+<meta property="og:site_name" content="{{ .Site.Params.title }}">
+<meta property="og:locale" content="en_US">
+
+<!-- Twitter Card Meta Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ .Site.Params.title }} - Gourmet Cakes & Patisserie">
+<meta name="twitter:description" content="{{ .Site.Params.description }}">
+<meta name="twitter:image" content="{{ .Site.BaseURL }}{{ index .Site.Params.images 0 }}">
+
+<!-- Business Schema Markup for Local SEO and AI Discoverability -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Bakery",
+  "name": "Cake Caboodle",
+  "description": "{{ .Site.Params.description }}",
+  "url": "{{ .Site.BaseURL }}",
+  "logo": "{{ .Site.BaseURL }}{{ .Site.Params.logo }}",
+  "image": "{{ .Site.BaseURL }}{{ index .Site.Params.images 0 }}",
+  "telephone": "+91-7276239427",
+  "email": "cuisinecaboodle@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "3rd Floor, SEASONS MALL, Magarpatta",
+    "addressLocality": "Hadapsar",
+    "addressRegion": "Maharashtra",
+    "postalCode": "411013",
+    "addressCountry": "IN"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "18.5189425",
+    "longitude": "73.9305981"
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+    "opens": "11:00",
+    "closes": "23:00"
+  },
+  "servesCuisine": ["Desserts", "Cakes", "Pastries", "Chocolate"],
+  "priceRange": "$$",
+  "currenciesAccepted": "INR",
+  "paymentAccepted": ["Cash", "Credit Card", "UPI", "Online Payment"],
+  "hasMenu": "https://www.instagram.com/cakecaboodle/",
+  "sameAs": [
+    "https://www.instagram.com/cakecaboodle/",
+    "https://www.facebook.com/cuisinecaboodle",
+    "https://www.zomato.com/pune/cake-caboodle-magarpatta/order",
+    "https://www.swiggy.com/city/pune/cake-caboodle-magarpatta-rest1164932"
+  ],
+  "areaServed": {
+    "@type": "Place",
+    "name": "Pune, Maharashtra, India"
+  },
+  "makesOffer": [
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Custom Cake Design",
+        "description": "Personalized cakes for birthdays, weddings, and special occasions"
+      }
+    },
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Corporate Orders",
+        "description": "Cakes and gift hampers for corporate events and client gifts"
+      }
+    },
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Cake Delivery",
+        "description": "Home delivery of gourmet cakes and pastries via Zomato and Swiggy"
+      }
+    }
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Cake Caboodle Menu",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Product",
+          "name": "Custom Birthday Cakes",
+          "category": "Cakes"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Product",
+          "name": "Wedding Cakes",
+          "category": "Cakes"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Product",
+          "name": "Artisanal Chocolates",
+          "category": "Chocolate"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Product",
+          "name": "Mini Desserts",
+          "category": "Pastries"
+        }
+      }
+    ]
+  }
+}
+</script>
+
+<!-- Organization Schema for Brand Recognition -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Cake Caboodle",
+  "alternateName": "Cake Caboodle Patisserie",
+  "url": "{{ .Site.BaseURL }}",
+  "logo": "{{ .Site.BaseURL }}{{ .Site.Params.logo }}",
+  "description": "{{ .Site.Params.description }}",
+  "foundingDate": "2022",
+  "founders": [
+    {
+      "@type": "Person",
+      "name": "Cake Caboodle Team"
+    }
+  ],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+91-7276239427",
+    "contactType": "customer service",
+    "email": "cuisinecaboodle@gmail.com",
+    "availableLanguage": ["English", "Hindi"]
+  },
+  "sameAs": [
+    "https://www.instagram.com/cakecaboodle/",
+    "https://www.facebook.com/cuisinecaboodle"
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "3rd Floor, SEASONS MALL, Magarpatta",
+    "addressLocality": "Hadapsar",
+    "addressRegion": "Maharashtra",
+    "postalCode": "411013",
+    "addressCountry": "IN"
+  }
+}
+</script>
+
+<!-- Website Schema for Search Engines -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "{{ .Site.Params.title }}",
+  "description": "{{ .Site.Params.description }}",
+  "url": "{{ .Site.BaseURL }}",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "{{ .Site.BaseURL }}?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "{{ .Site.Params.title }}",
+    "logo": "{{ .Site.BaseURL }}{{ .Site.Params.logo }}"
+  }
+}
+</script>

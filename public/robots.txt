@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /.git/
+
+# Sitemap location
+Sitemap: https://cakecaboodle.in/sitemap.xml
+
+# Additional sitemaps for better indexing
+Sitemap: https://cakecaboodle.in/sitemap.xml

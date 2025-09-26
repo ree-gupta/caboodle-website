@@ -4,13 +4,13 @@ languageCode: "en-us"
 
 title: "Cake Caboodle"
 
-# googleAnalytics: ""
+googleAnalytics: "G-4JHN9QHJCZ"
 
 summaryLength: 20
 
 params:
   title: "Cake Caboodle"
-  description: "Cake Caboodle offers gourmet cakes and pastries, crafted with the finest ingredients for a celebration of flavor and artistry. From custom cakes to a variety of treats, we cater to all your sweet indulgences."
+  description: "Cake Caboodle offers gourmet cakes and pastries in Pune, crafted with the finest ingredients for a celebration of flavor and artistry. From custom wedding cakes to corporate gift hampers, we cater to all your sweet indulgences. Located in Magarpatta, Hadapsar with home delivery available."
   images:
     - "images/hero-image.png"
 
@@ -57,7 +57,7 @@ menus:
 
   buttons:
     - name: "Order NOW!"
-      url: "https://wa.me/c/917460884929"
+      url: "https://wa.me/c/917276239427"
       weight: 5
       pre: "btn btn-primary text-light"
 
