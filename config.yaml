@@ -10,7 +10,7 @@ summaryLength: 20
 
 params:
   title: "Cake Caboodle"
-  description: "Cake Caboodle offers gourmet cakes and pastries in Pune, crafted with the finest ingredients for a celebration of flavor and artistry. From custom wedding cakes to corporate gift hampers, we cater to all your sweet indulgences. Located in Magarpatta, Hadapsar with home delivery available."
+  description: "Cake Caboodle is Pune's premium patisserie, established in 2020 and now located at SEASONS MALL, Magarpatta. We specialize in custom cakes for all occasions, artisanal chocolates, and corporate gift hampers. From birthdays to festivals and celebrations, we craft each creation with premium ingredients and artisanal expertise."
   images:
     - "images/hero-image.png"
 
